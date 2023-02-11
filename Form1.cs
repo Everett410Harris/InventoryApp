@@ -1,8 +1,8 @@
 namespace AppInventory
 {
-    public partial class Form1 : Form
+    public partial class InventoryManagement : Form
     {
-        public Form1()
+        public InventoryManagement()
         {
             InitializeComponent();
         }
