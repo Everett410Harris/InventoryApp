@@ -67,6 +67,7 @@
             this.inventoryDGV.RowTemplate.Height = 25;
             this.inventoryDGV.Size = new System.Drawing.Size(1290, 434);
             this.inventoryDGV.TabIndex = 1;
+            this.inventoryDGV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryDGV_CellDoubleClick);
             // 
             // newBtn
             // 
@@ -78,6 +79,7 @@
             this.newBtn.TabIndex = 2;
             this.newBtn.Text = "New";
             this.newBtn.UseVisualStyleBackColor = false;
+            this.newBtn.Click += new System.EventHandler(this.newBtn_Click);
             // 
             // saveBtn
             // 
@@ -89,6 +91,7 @@
             this.saveBtn.TabIndex = 3;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // deleteBtn
             // 
@@ -100,6 +103,7 @@
             this.deleteBtn.TabIndex = 4;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // skuLbl
             // 
@@ -148,6 +152,12 @@
             // categoryCB
             // 
             this.categoryCB.FormattingEnabled = true;
+            this.categoryCB.Items.AddRange(new object[] {
+            "Furniture",
+            "Lamps",
+            "Kitchenware",
+            "Tables",
+            "Bathroom Decor"});
             this.categoryCB.Location = new System.Drawing.Point(876, 212);
             this.categoryCB.Name = "categoryCB";
             this.categoryCB.Size = new System.Drawing.Size(426, 23);
@@ -223,6 +233,7 @@
             this.Controls.Add(this.mainLbl);
             this.Name = "InventoryManagement";
             this.Text = "Inventory Management";
+            this.Load += new System.EventHandler(this.InventoryManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
